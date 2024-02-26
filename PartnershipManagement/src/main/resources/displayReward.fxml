@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="403.0" prefWidth="777.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DisplayReward">
+    <children>
+
+        <AnchorPane id="AnchorPane" layoutY="6.0" prefHeight="436.0" prefWidth="777.0" style="-fx-background-color: #F0EDD4;">
+            <children>
+                <ScrollPane layoutX="390.0" layoutY="124.0" prefHeight="225.0" prefWidth="387.0" style="-fx-background-color: #BBC3A4;">
+                    <content>
+                        <GridPane fx:id="grid" vgap="100.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <padding>
+                                <Insets bottom="100.0" top="100.0" />
+                            </padding>
+
+                        </GridPane>
+                    </content>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </ScrollPane>
+                <AnchorPane layoutY="158.0" prefHeight="199.0" prefWidth="359.0" style="-fx-background-color: #F0EDD4;">
+               <children>
+                  <ImageView fitHeight="233.0" fitWidth="350.0" layoutX="4.0" layoutY="-40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/log2.png" />
+                     </image>
+                  </ImageView>
+                        <ImageView fitHeight="95.0" fitWidth="106.0" layoutX="238.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/logooo-removebg-preview.png" />
+                            </image>
+                        </ImageView>
+               </children>
+                </AnchorPane>
+                <TextField fx:id="cher" layoutX="491.0" layoutY="93.0" onKeyPressed="#chercherkey" prefHeight="18.0" prefWidth="113.0" promptText=" Search Reward" style="-fx-background-color: #50623A;">
+                    <effect>
+                        <InnerShadow>
+                            <color>
+                                <Color red="0.1" green="0.1" blue="0.1" />
+                            </color>
+                        </InnerShadow>
+                    </effect>
+            </TextField>
+                <Button fx:id="stattbn" layoutX="641.0" layoutY="357.0" mnemonicParsing="false" onAction="#stats" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: #50623A; -fx-background-radius: 5;" text="Statistics" textFill="#b2bea1">
+                    <font>
+                        <Font name="Gadugi Bold" size="12.0" />
+                    </font>
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color red="0.8269709944725037" green="0.8771929740905762" blue="0.7337015271186829" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </Button>
+                  <Button fx:id="ret" layoutX="491.0" layoutY="357.0" mnemonicParsing="false" onAction="#retour" prefHeight="25.0" prefWidth="144.0" style="-fx-background-color: #50623A; -fx-background-radius: 5;" text="Go To Partnerships" textFill="#b1c796">
+                      <font>
+                          <Font name="Gadugi Bold" size="12.0" />
+                      </font>
+                      <effect>
+                          <DropShadow>
+                              <color>
+                                  <Color red="0.8784313797950745" green="0.8627451062202454" blue="0.6745098233222961" />
+                              </color>
+                          </DropShadow>
+                      </effect>
+                  </Button>
+                <Button fx:id="ajouttbn" layoutX="612.0" layoutY="93.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="25.0" prefWidth="159.0" style="-fx-background-color: #50623A; -fx-background-radius: 5;" text="Add Reward" textFill="#b4c999">
+                    <font>
+                        <Font name="Gadugi Bold" size="11.0" />
+                    </font>
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color red="0.597935140132904" green="0.719298243522644" blue="0.5416937470436096" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </Button>
+
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
